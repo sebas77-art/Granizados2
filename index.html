@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Granizados a tu Gusto</title>
+  <!-- Fuente Montserrat desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">GRANIZADOS A TU GUSTO</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#personaliza">Personaliza</a></li>
+          <li><a href="#filtros">Filtros</a></li>
+          <li><a href="#carrito">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE INICIO -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h2>¡Crea el granizado perfecto!</h2>
+      <p>Sabores frescos, toppings deliciosos y opciones únicas.</p>
+      <img src="granizado.jpg" alt="Granizado colorido" />
+      <a href="#personaliza" class="btn">¡Empezar ahora!</a>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE PERSONALIZACIÓN -->
+  <section id="personaliza" class="personaliza container">
+    <h3>Selecciona tus preferencias</h3>
+    <form id="form-personaliza">
+      <label>Sabor:
+        <select name="sabor" required>
+          <option value="">Seleccionar</option>
+          <option value="limon">Limón</option>
+          <option value="frutilla">Frutilla</option>
+          <option value="mango">Mango</option>
+          <option value="naranja">Naranja</option>
+          <option value="sandia">Sandía</option>
+        </select>
+      </label>
+
+      <label>Topping:
+        <select name="topping" required>
+          <option value="">Seleccionar</option>
+          <option value="gomitas">Gomitas</option>
+          <option value="chocolate">Chocolate</option>
+          <option value="frutas">Frutas</option>
+          <option value="crema">Crema batida</option>
+          <option value="granola">Granola</option>
+        </select>
+      </label>
+
+      <label>Agregar alcohol:
+        <input type="checkbox" name="alcohol" />
+      </label>
+
+      <button type="submit" class="btn">Agregar al carrito</button>
+    </form>
+
+    <!-- GALERÍA DE SABORES -->
+    <div class="galeria-sabores">
+      <img src="limon.jpg" alt="Limón" />
+      <img src="fresa.jpg" alt="Frutilla" />
+      <img src="mango.jpg" alt="Mango" />
+      <img src="naranja.jpg" alt="Naranja" />
+      <img src="sandia.jpg" alt="Sandía" />
+    </div>
+  </section>
+
+  <!-- FILTROS DE SALUD -->
+  <section id="filtros" class="container">
+    <h3>Filtros de salud</h3>
+    <form>
+      <label><input type="checkbox" name="sinAzucar" /> Sin azúcar</label>
+      <label><input type="checkbox" name="sinGluten" /> Sin gluten</label>
+      <label><input type="checkbox" name="sinAlcohol" /> Sin alcohol</label>
+    </form>
+  </section>
+
+  <!-- RESUMEN DEL PEDIDO -->
+  <section id="carrito" class="container">
+    <h3>Resumen del pedido</h3>
+    <img src="carrito.jpg" alt="Carrito feliz" style="width:80px; margin-top:1rem;" />
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total:</strong> $<span id="total">0</span></p>
+
+    <!-- FORMULARIO DE ENVÍO DE CORREO -->
+    <form id="form-correo" style="display:none;">
+      <label>Correo electrónico:
+        <input type="email" name="email" required />
+      </label>
+      <button type="submit" class="btn">Enviar recibo</button>
+    </form>
+
+    <!-- 🔴 NUEVO BOTÓN: Eliminar pedido -->
+    <button id="btn-eliminar" class="btn" style="background-color: #d9534f;">Eliminar pedido</button>
+
+    <!-- MENSAJE DE CONFIRMACIÓN -->
+    <p id="mensaje-confirmacion"></p>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container">
+      <p>©️ 2025 Granizados a tu Gusto | contacto@granizados.com</p>
+    </div>
+  </footer>
+
+  <!-- Conexión al archivo JS -->
+  <script src="script.js"></script>
+</body>
+</html>
